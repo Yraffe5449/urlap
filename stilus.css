@@ -55,6 +55,19 @@ nav ul {
 nav a :hover {
     color: rgb(255, 251, 0);
 }
+
+/*űrlapformázás*/
+
+#nevek {
+    display: grid;
+    grid-template-columns: 100px auto;
+}
+
+#nevek label {
+    text-align: right;
+    padding-right: 5px;
+}
+
 /*oldal változás 600px alatt 500px-ig*/
 @media screen and (max-width: 600px) {
     main {
@@ -76,6 +89,15 @@ nav a :hover {
     nav ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    #nevek {
+        grid-template-columns: auto;
+        font-size: 15pt;
+    }
+
+    #nevek label {
+        text-align: left;
     }
     /*navigáció li tagjei kerüljenek egymás mellé*/
 }

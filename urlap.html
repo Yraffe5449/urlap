@@ -23,14 +23,34 @@
         </nav>
 
         <article>
-            <form action="/action_page.php" method="post">
+            <form>
+                <fieldset id="nevek">
+                    <legend>Név</legend>
                 <label for="vname">Vezetéknév:</label>
-                <input type="text" id="vname" name="vname"><br><br>
-
+                <input type="text" id="vname" name="vname" placeholder="Vezetéknév">
+                
                 <label for="kname">Keresztnév:</label>
-                <input type="text" id="kname" name="kname"><br><br>
+                <input type="text" id="kname" name="kname" value="Keresztnév">
+                </fieldset>
 
-                <input type="submit" value="OK">
+                <fieldset>
+                    <legend>Neme</legend>
+                <input type="radio" id="html" name="nem" value="Férfi">
+                <label for="html">Férfi</label><br>
+                <input type="radio" id="css" name="nem" value="Nő">
+                <label for="css">Nő</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Nyelv</legend>
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">JavaScript</label><br>
+                </fieldset>
+                <input type="button" value="OK">
               </form>
         </article>
 
