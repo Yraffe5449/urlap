@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url(hatter.jpg);
+}
+
+main {
+    width: 70%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "h h h h"
+        "n n n n"
+        "a a a a"
+        "f f f f";
+}
+
+header,
+nav,
+aside,
+article,
+footer {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+header {
+    grid-area: h;
+    background-image: url(mikukep.jpg);
+    height: 600px;
+}
+
+nav {
+    grid-area: n;
+    background-color: red;
+}
+
+article {
+    grid-area: a;
+    background-color: white;
+    padding-left: 30px;
+}
+
+footer {
+    grid-area: f;
+}
+
+nav li {
+    text-decoration: none;
+    display: block;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: green;
+}
+
+nav ul {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 0%;
+}
+#adat {
+    background-color: rgb(209, 209, 209);
+}
+#formk {
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 100px auto;
+}
+
+article h3 {
+    border-bottom: 1px rgb(87, 87, 87) solid;
+    padding: 10px;
+}
+@media screen and (max-width: 600px) {
+    header {
+        display: none;
+    }
+    nav ul {
+        grid-template-columns: auto;
+    }
+    main {
+        width: 100%;
+    }
+    #formk {
+        width: 100%;
+        grid-template-columns: 100px;
+    }
+}
