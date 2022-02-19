@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box; /*az elem szélességébe számítson bele a border meg a padding is*/
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "h h h h"
+        "n a a a"
+        "f f f f";
+
+    text-align: justify; /* szöveg igazítás*/
+    width: 80%; /*méret*/
+    max-width: 800px; /*max méret*/
+    margin: 0 auto; /*main középre igazítás*/
+}
+
+main,
+header,
+nav,
+aside,
+article,
+footer {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+header {
+    grid-area: h;
+}
+nav {
+    grid-area: n;
+}
+
+article {
+    grid-area: a;
+}
+
+footer {
+    grid-area: f;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    color: green;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a :hover {
+    color: rgb(255, 251, 0);
+}
+/*oldal változás 600px alatt 500px-ig*/
+@media screen and (max-width: 600px) {
+    main {
+        background: red;
+        width: 100%;
+    }
+    /*oldal változás 500px alatt*/
+    @media screen and (max-width: 500px) {
+        main {
+            background: greenyellow;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "h"
+                "n"
+                "a"
+                "f";
+        }
+    }
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+}
+/*navigáció li tagjei kerüljenek egymás mellé*/
+
+}
